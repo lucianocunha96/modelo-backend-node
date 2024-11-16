@@ -8,5 +8,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/lists', listasController.getData);
+router.get('/lists/:id', listasController.getData);
+
+router.post('/lists', listasController.createList);
+
+router.delete('/lists/:uid', listasController.deleteList);
 
 module.exports = router;
